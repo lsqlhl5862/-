@@ -38,6 +38,7 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.47" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-undertow/2.0.0.BUILD-SNAPSHOT/spring-boot-starter-undertow-2.0.0.BUILD-20180301.043910-634.jar" output-file-name="spring-boot-starter-undertow-2.0.0.BUILD-SNAPSHOT.jar" />
           <element id="library" level="project" name="Maven: io.undertow:undertow-core:1.4.22.Final" />
           <element id="library" level="project" name="Maven: org.jboss.xnio:xnio-api:3.3.8.Final" />

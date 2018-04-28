@@ -1,4 +1,4 @@
-package course;
+package MessageChat;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.boot.SpringApplication;

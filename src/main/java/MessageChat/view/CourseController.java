@@ -1,8 +1,9 @@
-package course.view;
+package MessageChat.view;
 
 //这个包手动添加,包含了GET,POST等声明
 
-import course.service.PtpProducer;
+import MessageChat.service.MessageService;
+import MessageChat.service.PtpProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,19 +21,22 @@ public class CourseController {
 
 	@Autowired
 	private PtpProducer ptpProducer;
+	@Autowired
+	private MessageService messageService;
 
 	@RequestMapping(value="/add",method=GET)
-	public String main()
+	public String main(Model model)
 	{
+		model.addAttribute("MessageList", messageService.ListMessage());
 		return "add";
 	}
 	//可以将post需要传递的数据利用addAttribute函数添加到model中
 	@RequestMapping(value="/add",method=POST)
-	public String msgSubmit(String text,Model model) {
+	public String msgSubmit(String text,Model model) throws InterruptedException {
 		model.addAttribute(text);
 		//调用addCourse()函数
 		ptpProducer.convertAndSend(text);
-
+		model.addAttribute("MessageList", messageService.ListMessage());
 		return "add";
 	}
 }
